@@ -1,3 +1,12 @@
+/*
+* File: api.component.ts
+* Author: Baráth Dávid
+* Copyright: 2023, Baráth Dávid
+* Group: Szoft 2 N
+* Date: 2023-03-05
+* Github: https://github.com/david587/
+* Licenc: GNU GPL
+*/ 
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../shared/api.service';
 
