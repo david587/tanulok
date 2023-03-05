@@ -25,4 +25,10 @@ export class ApiService {
     let url = this.apihost + endpoint;
     return this.http.get<any>(url);
   }
+
+  getScores() {
+    let endpoint = 'scores';
+    let url = this.apihost + endpoint;
+    return this.http.get<any>(url);
+  }
 }

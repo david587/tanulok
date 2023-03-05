@@ -26,6 +26,7 @@ export class ApiComponent implements OnInit{
   title = 'tanulok';
 
   students:any = [];
+  scores:any = [];
 
   getStudents() {
     this.api.getStudents().subscribe({
@@ -34,6 +35,17 @@ export class ApiComponent implements OnInit{
         
         
         // this.message = response.message;
+      },
+      error: (err) => {
+        console.log('Hiba! A REST API lekérdezés sikertelen!');
+      }
+    });
+  }
+
+  getScores() {
+    this.api.getScores().subscribe({
+      next: (response: any) => {
+        this.scores = response;
       },
       error: (err) => {
         console.log('Hiba! A REST API lekérdezés sikertelen!');
